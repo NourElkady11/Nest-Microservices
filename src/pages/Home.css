@@ -1,0 +1,106 @@
+/* Main Home Page Styles */
+.home {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  /* Banner Section */
+  .home__banner {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 15px; /* Rounded corners for the banner */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  }
+  
+  .home__bannerImage {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px; /* Rounded corners to match the banner */
+  }
+  
+  /* Categories Section */
+  .home__categories {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; /* Adds spacing between the categories */
+    margin: 30px 0;
+    flex-wrap: wrap; /* Ensures categories stack on smaller screens */
+    padding: 20px; /* Adds padding around the categories section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .home__category {
+    text-align: center;
+    flex: 1;
+    max-width: 250px; /* Limits the width of each category */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for individual category */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth hover effect */
+  }
+  
+  .home__category:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  }
+  
+  .home__categoryImage {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+  }
+  
+  .home__categoryButton {
+    background-color: transparent; /* Transparent background */
+    border: none; /* Remove default button borders */
+    text-align: center;
+    cursor: pointer; /* Indicates a clickable element */
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+  }
+  
+  .home__categoryButton:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  /* Hover Effect for Category Images */
+  .home__categoryImage:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  /* Footer Section */
+  .home__footer {
+    text-align: center;
+    background-color: #021522; /* Darker footer background for contrast */
+    color: white;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-radius: 10px; /* Rounded corners for footer */
+  }
+  
+  .home__footer p {
+    margin: 0;
+    font-size: 14px; /* Smaller text for the footer */
+  }
+  
+  /* Responsive Design: Stacking Categories on Smaller Screens */
+  @media (max-width: 768px) {
+    .home__categories {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .home__categoryImage {
+      width: 150px; /* Smaller category images on mobile */
+      height: 150px;
+    }
+  }
+  
