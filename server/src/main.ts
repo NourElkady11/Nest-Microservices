@@ -10,9 +10,16 @@ async function bootstrap() {
   console.log('DB2:', process.env.DB2); // Debug
 
   const app = await NestFactory.create(AppModule);
-  await app.listen(3000);
+    // Enable CORS
+    app.enableCors({
+      origin: 'http://localhost:3000', // React frontend URL
+      methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+      credentials: true, // If you need to allow cookies
+    });
+  await app.listen(3001);
 }
 bootstrap();
+
 
 
 
